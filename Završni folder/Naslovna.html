@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <title>Završni projekt</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Tomislav Lacković">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="Naslovna.css">
+    <style>
+        body {
+            margin-left: 0;
+            padding: 0;
+            border: none;
+            font-family: Arial, sans-serif;
+            line-height: normal; 
+        }
+        main {
+            padding-top: 150px;
+        }
+        .slika-okvir {
+            float: left;
+            border: 1px solid #088dec;
+            margin: 5px 20px 20px 20px;
+            text-align: center;
+            display: inline-block;
+            max-width: 450px;
+            height: auto;
+        }
+        .slika-okvir img {
+            display: block;
+            width: 100%;
+            height: 200px;
+        }
+        figcaption {
+            margin-top: 10px;
+            margin-right: 10px;
+            font-style: italic;
+            color: #088dec;
+            padding: 5px;
+        }
+        
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .banner {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    
+        nav {
+            background-color: #088dec;
+            text-align: center;
+            margin-top: 0;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #170bee;
+        }
+        h1 {
+            color: #088dec;
+            margin-top: 50px;
+            margin-bottom: 5px;
+            margin-right: 300px;
+            font-size: 36px;
+            text-align: center;
+        }
+        article p {
+            text-align: justify;
+            margin: 0 10px 0 15px; 
+            width: auto;
+            overflow-wrap: break-word;
+            box-sizing: border-box; 
+        }
+
+        h2 {
+            color: #088dec;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            font-size: 36px;
+        }
+        h3 {
+            font-size: 20px;
+            margin: 0 15px 10px 15px; 
+            color: #088dec;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        footer {
+            background-color: #088dec;
+            color: white;
+            text-align: center;
+            height: 25px;
+            line-height: 25px;
+            padding: 5px 0;
+            position: relative;
+        }
+        .social-media {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+        }
+        .social-media a {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .social-media img {
+            width: 26px;
+            height: 24px;
+        }
+        .copyright p {
+            margin: 0;
+        }
+        .novosti {
+            margin: 20px;
+        }
+        .novosti h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .article-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .article {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .article img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .article p {
+            font-size: 14px;
+            line-height: normal; 
+            color: #088dec;
+            margin-bottom: 10px;
+        }
+        .article time {
+            display: block;
+            font-size: 12px;
+            color: #088dec;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin: 0 0 5px 0;
+            }
+            h2 {
+                text-align: center;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .article {
+                margin-bottom: 5px;
+            }
+            article p {
+                margin: 0 10px 50px 10px !important;
+                max-width: 100% !important;
+                text-align: justify;
+            }
+            .slika-okvir {
+                max-width: 90%;
+                margin: 7px auto;
+                padding: 0 15px;
+                border: 1px solid #ffffff;
+                text-align: center;
+            }
+            .slika-okvir img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+            }
+            nav {
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 2px 0;
+            }
+            main {
+                padding-top: 300px;
+                margin-bottom: 10px;
+            }
+            footer {
+                margin-top: 25px;
+            }
+            .banner {
+                height: 100px;
+            }
+        }
+
+    </style>
+    
+    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="banner">
+                <img src="Slike/pips.jpg" alt="Banner">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Naslovna.html">Početna stranica</a></li>
+                    <li><a href="novosti.html">Novosti</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="O nama.html">O nama</a></li>
+                    <li><a href="galerija.html">Galerija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="pocetna">
+            <article>
+                <h1>Dobrodošli na Wall Street – Vaša destinacija za najnovije financijske informacije</h1>
+                <figure class="slika-okvir">
+                    <img src="Slike/wall-street.jpg" alt="Wall Street">
+                    <figcaption>Wall Street, globalno prepoznat kao srce financijskog tržišta, predstavlja epicentar gdje se susreću investitori, poduzetnici i financijski analitičari.</figcaption>
+                </figure>
+                <h2>Posljednje informacije i analize</h2>
+                <p>Wall Street je najpoznatije financijsko tržište na svijetu, smješteno u New Yorku, koje je domaćin najvećih financijskih institucija i najvećih investitora na planetu. Iako se ime "Wall Street" često koristi kao metafora za američko financijsko tržište u cjelini, to je zapravo ulica u Manhattan's Financial District-u gdje se nalaze burze kao što su New York Stock Exchange (NYSE) i NASDAQ.</p>
+                
+                <p>Ovdje ćete pronaći najnovije vijesti o kretanjima na tržištu, analizama ekonomskih pokazatelja i izvještajima o velikim korporacijama. Naša stranica pruža detaljne informacije o tržišnim prilikama, dionicama i trendovima koji oblikuju financijski svijet. Wall Street nije samo o dionicama i burzama; ovo je mjesto na kojem se oblikuje ekonomska politika, gdje se donose odluke koje utječu na milijarde dolara i globalne gospodarstvene tokove.</p>
+            
+                <p>Osim toga, Wall Street je i centar za razvoj novih financijskih instrumenata, trgovinskih strategija i inovacija u financijskom sektoru. Investitori, analitičari i poduzetnici ovdje se okupljaju kako bi razvijali nove ideje, osnivali start-upove i mijenjali dinamiku globalne ekonomije. Svaka odluka donesena na Wall Streetu može imati dubok i dugotrajan utjecaj na živote ljudi širom svijeta.</p>
+            
+                <p>Naša misija je pružiti vam kvalitetne informacije koje će vam pomoći da budete u toku sa svim promjenama i prilikama koje Wall Street tržište nudi. Pratite nas za najnovije vijesti o tržištu dionica, trgovanju na burzi, kretanjima u sektoru tehnologije, zdravstva i financija, te globalnim događanjima koji oblikuju tržišta.</p>
+            
+                <h3>Wall Street kao epicentar globalne ekonomije</h3>
+                <p>Wall Street je srce financijskog sektora, mjesto gdje se svakodnevno obavljaju milijarde dolara vrijednih transakcija. Mnoge velike korporacije, poput Googlea, Applea i Microsofta, svoje dionice kotiraju na Wall Streetu. Tržište kapitala ujedinjuje investitore i poduzeća, omogućujući lakši pristup kapitalu i širenje poslovanja. Bez Wall Streeta, mnoge od najvećih američkih kompanija ne bi mogle rasti i razvijati se na globalnoj razini.</p>
+            
+                <p>Za investitore, Wall Street predstavlja tržište bez premca, gdje su dionice, obveznice i druge investicijske opcije dostupne u svakom trenutku. Veliki institucionalni investitori, poput fondova mirovinskog osiguranja i investicijskih banaka, igraju ključnu ulogu na tržištu. S obzirom na globalnu povezanost, svaka značajna odluka ili događaj na Wall Streetu može utjecati na financijska tržišta diljem svijeta, od Azije do Europe, pa čak i na tržištima u razvoju.</p>
+            
+                <h3>Kako Wall Street utječe na globalnu ekonomiju?</h3>
+                <p>Wall Street nije samo središte za financijske investicije. To je ekonomski mehanizam koji utječe na sve aspekte života, uključujući zapošljavanje, gospodarski rast, pa čak i političke odluke. Na primjer, kada velike kompanije poput Tesla ili Amazon donesu odluku da povećaju proizvodnju ili prošire svoje poslovanje, to može rezultirati novim radnim mjestima i povećanjem bruto domaćeg proizvoda (BDP). Odluke koje se donose na Wall Streetu također mogu oblikovati ekonomske politike drugih zemalja i utjecati na kamatne stope, inflaciju i tečajeve valuta.</p>
+            
+                <p>Wall Street također igra ključnu ulogu u inovacijama i novim tehnologijama. Tržišta kapitala omogućuju start-upovima da prikupi kapital za razvoj novih proizvoda i usluga, često izazivajući revoluciju u industrijama kao što su biotehnologija, obnovljivi izvori energije i umjetna inteligencija. To sve dovodi do veće konkurentnosti na globalnoj razini, što donosi nove prilike za investitore, ali i za ekonomije u cjelini.</p>
+            
+                <h3>Tehnička analiza i dionice na Wall Streetu</h3>
+                <p>Jedan od najvažnijih aspekata Wall Streeta je tehnička analiza, koja uključuje proučavanje povijesnih podataka o cijenama dionica, volumenima trgovine i drugim tržišnim pokazateljima kako bi se predvidjeli budući smjerovi kretanja tržišta. Tehnička analiza je ključna za mnoge investitore koji se bave dnevnim trgovanjem i kratkoročnim ulaganjima. Korištenjem tehničkih alata, investitori mogu predvidjeti kratkoročne promjene cijena i napraviti informirane odluke o kupovini ili prodaji dionica.</p>
+            
+                <p>Investitori na Wall Streetu također prate razne ekonomske indikatore poput bruto domaćeg proizvoda (BDP), inflacije, nezaposlenosti i kamatnih stopa, koji mogu utjecati na tržište kapitala. Dobro razumijevanje ovih pokazatelja i kako oni utječu na cijene dionica može pomoći investitorima da donesu bolje odluke u vezi s njihovim portfeljima.</p>
+            
+                <h3>Izazovi i prilike na Wall Streetu</h3>
+                <p>Wall Street suočava s mnogim izazovima, uključujući volatilnost tržišta, globalne ekonomske nesigurnosti, geopolitičke napetosti i promjene u regulatornom okruženju. Međutim, unatoč tim izazovima, Wall Street također predstavlja nevjerojatne prilike za investitore koji su spremni istraživati nove sektore i diversificirati svoje portfelje.</p>
+            
+                <p>Primjerice, sektor tehnologije, koji uključuje velike tehnološke tvrtke kao što su Apple, Microsoft, Google i Amazon, doživljava značajan rast i inovacije. Ove tvrtke imaju globalni doseg i snažnu tržišnu poziciju, što ih čini privlačnim investicijama. S druge strane, sektor energetske industrije također se suočava s velikim promjenama, jer se sve više ulaže u obnovljive izvore energije i tehnologije za smanjenje emisije ugljikovog dioksida. S obzirom na važnost zelene energije, investitori sada imaju priliku ulagati u održiviju budućnost.</p>
+            
+                <p>Unatoč izazovima, Wall Street nudi mnoge mogućnosti za profitabilna ulaganja, što ga čini ključnim dijelom globalne ekonomije. Bez Wall Streeta, globalna ekonomija bila bi znatno drugačija, a razvoj mnogih ključnih industrija bio bi usporen.</p>
+            </article>
+            
+        </section>
+        <section id="novosti">
+            <h1>Najnovije vijesti</h1>
+            <div class="article-container">
+                <article class="article">
+                    <img src="Slike/US_Growth.jpg" alt="US Growth">
+                    <h3><a href="us-growth.html">US growth faster than expected</a></h3>
+                    <p>The growth extended the robust activity reported in the previous quarter, when US GDP grew at an annual pace of 3.1%.</p>
+                    <time datetime="2025-01-07">25 October 2025</time>
+                </article>
+                <article class="article">
+                    <img src="Slike/tech_firm.jpg" alt="Wall Street">
+                    <h3><a href="wall-street.html">Wall Street: Tech firm surge pushes US markets higher</a></h3>
+                    <p>Investors piled into technology giants such as Amazon, Alphabet and Microsoft on Friday, driving the tech-heavy Nasdaq to one of its biggest one-day jumps this year.</p>
+                    <time datetime="2025-01-07">26 October 2025</time>
+                </article>
+                <article class="article">
+                    <img src="Slike/Hotel_booking.jpg" alt="Hotel Booking">
+                    <h3><a href="hotel-booking.html">Hotel booking sites probed by consumer watchdog</a></h3>
+                    <p>Hotel booking sites are to be probed by the UK's competition watchdog to see if consumers are being misled by them.</p>
+                    <time datetime="2025-01-07">27 October 2025</time>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/tvojprofil" target="_blank">
+                <img src="Slike/github_logo.jpg" alt="GitHub">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="Slike/Facebook_logo.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="Slike/Twitter _logo.jpg" alt="Twitter">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tomislav Lacković. Sva prava pridržana.</p>
+        </div>
+    </footer>
+</body>
+</html>

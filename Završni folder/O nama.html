@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nama</title>
+    <style>
+        body, nav {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .banner {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    
+        nav {
+            background-color: #088dec;
+            text-align: center;
+            margin-top: 0;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #170bee;
+        }
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 80%;
+            margin: 100px auto 20px auto;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            margin: -5px 0;
+            color: #088dec;
+        }
+
+        video {
+            width: 70%; /* Postavlja širinu videa na 70% širine roditeljskog elementa */
+            height: auto; /* Automatski prilagođava visinu prema omjeru stranica */
+            display: block;
+            margin: 20px auto; /* Centriranje videa */
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #088dec;
+            color: white;
+            text-align: center;
+            height: 25px; /* Postavite manju visinu */
+            line-height: 25px; /* Malo povećajte line-height kako biste dobili razmak */
+            padding: 5px 0; /* Dodajte minimalni padding za dodatni razmak */
+            position: relative;
+        }
+
+        .social-media {
+            position: absolute;
+            top: -30px; /* Precizno pozicioniranje izvan footera */
+            left: 10px;
+        }
+
+        .social-media a {
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .copyright p {
+            margin: 0;
+        }
+        main {
+                padding-top: 100px ; /* Razmak od navigacije */
+            }
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin: -5px 0 5px 0;
+            }
+            h2 {
+                text-align: center;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            nav {
+                height: 200px; /* Promjena visine nav bara */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 2px 0;
+            }
+            /* Stvaranje prostora za fiksiranu navigaciju */
+            main {
+                padding-top: 215px ; /* Razmak od navigacije */
+            }
+            footer {
+                margin-top: 25px;
+            }
+            .banner {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="banner">
+                <img src="Slike/pips.jpg" alt="Banner">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Naslovna.html">Početna stranica</a></li>
+                    <li><a href="novosti.html">Novosti</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="O nama.html">O nama</a></li>
+                    <li><a href="galerija.html">Galerija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>FortuneFX</h1>
+            <video controls>
+                <source src="Slike/An inside look at Wall Street's most famous trader.mp4" type="video/mp4">
+                Vaš preglednik ne podržava HTML5 video.
+            </video>
+            <p>Dobrodošli na našu stranicu "FortuneFX". Ovdje ćete saznati više o našoj povijesti, misiji, i predanosti pružanju vrhunskih usluga na polju trgovanja forexom i dionicama.</p>
+            <p>Naša tvrtka specijalizirana je za analizu tržišta i pružanje inovativnih rješenja za ulaganja na globalnim financijskim tržištima. Naš tim stručnjaka kontinuirano prati najnovije trendove kako bi osigurao optimalne strategije za naše klijente.</p>
+            <p>Nadamo se da ćete kroz naš video i informacije na ovoj stranici bolje razumjeti našu viziju te kako vam možemo pomoći u postizanju vaših financijskih ciljeva. Uživajte u gledanju!</p>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/tvojprofil" target="_blank">
+                <img src="Slike/github_logo.jpg" alt="GitHub">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="Slike/Facebook_logo.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="Slike/Twitter _logo.jpg" alt="Twitter">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tomislav Lacković. Sva prava pridržana.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

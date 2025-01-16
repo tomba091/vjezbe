@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <title>Galerija Slika</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        nav {
+            background-color: #088dec;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #170bee;
+        }
+
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 80px;
+            padding: 0 10px;
+        }
+
+        .gallery-item {
+            box-sizing: border-box;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .gallery-item figcaption {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #088dec;
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            background-color: #088dec;
+            color: white;
+            text-align: center;
+            height: 25px;
+            line-height: 25px;
+            padding: 5px 0;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .social-media {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+        }
+
+        .social-media a {
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .copyright p {
+            margin: 0;
+        }
+
+        main {
+            padding-top: 130px;
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            main {
+                margin-top: 150px;
+                margin-bottom: 5px;
+            }
+            nav {
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 2px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            main {
+                margin-top: -50px;
+                margin-bottom: 5px;
+            }
+            nav {
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 2px 0;
+            }
+            main {
+                padding-top: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="banner">
+                <img src="Slike/pips.jpg" alt="Banner">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Naslovna.html">Početna stranica</a></li>
+                    <li><a href="novosti.html">Novosti</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="O nama.html">O nama</a></li>
+                    <li><a href="galerija.html">Galerija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="galerija" class="gallery">
+            <figure class="gallery-item">
+                <a href="Slike/Centar.jpg" target="_blank">
+                    <img src="Slike/Centar.jpg" alt="Pogled na Wall Street">
+                </a>
+                <figcaption>Wall Street u New Yorku, centar financijskog svijeta</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/Visoki neboder.jpg" target="_blank">
+                    <img src="Slike/Visoki neboder.jpg" alt="Zgrade Wall Streeta">
+                </a>
+                <figcaption>Visoki neboderi koji dominiraju Wall Streetom</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/Dionice.jpg" target="_blank">
+                    <img src="Slike/Dionice.jpg" alt="Burza Wall Street">
+                </a>
+                <figcaption>Wall Street Stock Exchange, simbol globalnog financijskog tržišta</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/Charging_Bull_statue.jpg" target="_blank">
+                    <img src="Slike/Charging_Bull_statue.jpg" alt="Charging Bull">
+                </a>
+                <figcaption>Charging Bull, ikona Wall Streeta koja simbolizira optimizam tržišta</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/sign-wall-street-new-york.jpg" target="_blank">
+                    <img src="Slike/sign-wall-street-new-york.jpg" alt="Znak Wall Street">
+                </a>
+                <figcaption>Znak Wall Street, oznaka poznate ulice u New Yorku</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/Trgovina.jpg" target="_blank">
+                    <img src="Slike/Trgovina.jpg" alt="Trgovanje na Wall Streetu">
+                </a>
+                <figcaption>Trgovina na Wall Streetu, gdje se donose ključne odluke o globalnim financijama</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/Skyline.jpg" target="_blank">
+                    <img src="Slike/Skyline.jpg" alt="Pogled na New York skyline">
+                </a>
+                <figcaption>Skyline New Yorka s pogledom na Wall Street</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/Historic.jpg" target="_blank">
+                    <img src="Slike/Historic.jpg" alt="Povijesni Wall Street">
+                </a>
+                <figcaption>Povijesni pogled na Wall Street, centar financijskih inovacija</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/Ulicna_scena.jpg" target="_blank">
+                    <img src="Slike/Ulicna_scena.jpg" alt="Pogled na Wall Street i grad">
+                </a>
+                <figcaption>Ulična scena na Wall Streetu, srcu globalnog kapitalizma</figcaption>
+            </figure>
+            <figure class="gallery-item">
+                <a href="Slike/People_on_walk.jpg" target="_blank">
+                    <img src="Slike/People_on_walk.jpg" alt="Ljudi na Wall Streetu">
+                </a>
+                <figcaption>Ljudi na Wall Streetu, simbol američke poslovne aktivnosti</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/tvojprofil" target="_blank">
+                <img src="Slike/github_logo.jpg" alt="GitHub">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="Slike/Facebook_logo.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="Slike/Twitter _logo.jpg" alt="Twitter">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tomislav Lacković. Sva prava pridržana.</p>
+        </div>
+    </footer>
+</body>
+</html>

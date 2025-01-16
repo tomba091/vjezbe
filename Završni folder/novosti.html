@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <title>US Growth Faster Than Expected</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto auto;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        article h1 {
+            color: #088dec;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        article p {
+            text-align: justify;
+            color: #555;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+
+        article a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        article a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .banner {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    
+        nav {
+            background-color: #088dec;
+            text-align: center;
+            margin-top: 0;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #170bee;
+        }
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        main {
+                padding-top: 200px ; /* Razmak od navigacije */
+            }
+
+        footer {
+            background-color: #088dec;
+            color: white;
+            text-align: center;
+            height: 25px;
+            line-height: 25px;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .copyright p {
+            margin: 0;
+        }
+
+        .social-media {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+        }
+
+        .social-media a {
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .social-media img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .gallery {
+            display: flex;
+            gap: 5px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item {
+            width: 23%;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        #imageModal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+        }
+
+        #imageModal img {
+            max-width: 90%;
+            max-height: 80%;
+            margin: auto;
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #imageModal .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #imageModal .close:hover,
+        #imageModal .close:focus {
+            color: #076cb3;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                text-align: center;
+                margin: 0 0 5px 0;
+                color: #088dec;
+            }
+
+            article p {
+                margin: 0 10px 10px 10px !important;
+                max-width: 100% !important;
+                text-align: justify;
+            }
+
+            nav {
+                height: 200px; /* Promjena visine nav bara */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 2px 0;
+            }
+
+
+            main {
+                margin-top: 170px;
+            }
+
+            .gallery-item {
+                width: 47%; /* 2 slike po redu na manjim ekranima */
+            }
+
+            .gallery {
+                gap: 5px;
+            }
+
+            article a {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="banner">
+                <img src="Slike/pips.jpg" alt="Banner">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Naslovna.html">Početna stranica</a></li>
+                    <li><a href="novosti.html">Novosti</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    <li><a href="O nama.html">O nama</a></li>
+                    <li><a href="galerija.html">Galerija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h1>US Economy Grows Faster Than Expected in Third Quarter</h1>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Slike/UGTE.jpg" alt="Slika 1" onclick="openModal('UGTE.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="Slike/US_Growth.jpg" alt="Slika 2" onclick="openModal('UGTE2.jpg')">
+                </div>
+            </div>
+            <p>The US economy expanded at an annual pace of 3% during the three months to the end of September, which was stronger than expected...</p>
+            <p>Further details about the economy's growth and the market impact...</p>
+            <a href="Završni projekt_6.html">Povratak na vijesti</a>
+        </article>
+
+        <article>
+            <h1>Global Stock Markets Show Resilience</h1>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Slike/Global Stock Markets Show Resilience1.jpg" alt="Slika 3" onclick="openModal('UGTE.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="Slike/Global Stock Markets Show Resilience2.jpg" alt="Slika 4" onclick="openModal('UGTE2.jpg')">
+                </div>
+            </div>
+            <p>The global stock markets showed resilience despite geopolitical tensions and inflation concerns...</p>
+            <p>Market analysts predict that this growth could continue into the next quarter...</p>
+            <a href="Završni projekt_6.html">Povratak na vijesti</a>
+        </article>
+
+        <article>
+            <h1>Technology Sector Remains Strong</h1>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Slike/Technology Sector Remains Strong1.jpg" alt="Slika 5" onclick="openModal('UGTE.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="Slike/Technology Sector Remains Strong2.jpg" alt="Slika 6" onclick="openModal('UGTE2.jpg')">
+                </div>
+            </div>
+            <p>The technology sector has continued to outperform other industries, driven by major advancements in artificial intelligence...</p>
+            <p>Experts believe that this trend will continue for the foreseeable future...</p>
+            <a href="Završni projekt_6.html">Povratak na vijesti</a>
+        </article>
+
+        <article>
+            <h1>Real Estate Market Faces Challenges</h1>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Slike/Real Estate Market Faces Challenges.jpg" alt="Slika 7" onclick="openModal('UGTE.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="Slike/Real Estate Market Faces Challenges2.jpg" alt="Slika 8" onclick="openModal('UGTE2.jpg')">
+                </div>
+            </div>
+            <p>The real estate market is experiencing a slowdown due to rising mortgage rates and housing supply shortages...</p>
+            <p>Many experts are advising potential homebuyers to wait for market conditions to improve...</p>
+            <a href="Završni projekt_6.html">Povratak na vijesti</a>
+        </article>
+
+        <article>
+            <h1>Energy Prices Continue to Climb</h1>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="Slike/Energy Prices Continue to Climb.jpg" alt="Slika 9" onclick="openModal('UGTE.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="Slike/Energi nova.jpg" alt="Slika 10" onclick="openModal('UGTE2.jpg')">
+                </div>
+            </div>
+            <p>Energy prices have continued to climb as global demand outstrips supply...</p>
+            <p>This is having an impact on households and businesses alike...</p>
+            <a href="Završni projekt_6.html">Povratak na vijesti</a>
+        </article>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/tvojprofil" target="_blank">
+                <img src="Slike/github_logo.jpg" alt="GitHub">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="Slike/Facebook_logo.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="Slike/Twitter _logo.jpg" alt="Twitter">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Tomislav Lacković. Sva prava pridržana.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(imageSrc) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
